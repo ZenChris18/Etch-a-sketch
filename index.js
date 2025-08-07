@@ -1,1 +1,15 @@
-console.log("Hello, world");
+const container = document.querySelector(`.container`)
+
+for(let i = 0; i < 16; i++ ){
+    const square = document.createElement(`div`)
+    square.classList.add("square")
+    container.appendChild(square)
+}
+
+const box = document.querySelectorAll(`.square`) // returns a nodelist (like an array)
+
+for(let j = 0; j < box.length ; j++){
+    box[j].addEventListener(`mouseenter`, () => {
+        box[j].style.backgroundColor = 'red';
+    })
+}

@@ -2,8 +2,17 @@ body{
     background-color: pink;
 }
 
-
 .container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.square{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border: 10px;
+    padding: 10px
+
 }
