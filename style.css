@@ -12,9 +12,9 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 600px;   /* fixed size */
-    height: 600px;  /* fixed size */
-    border: 1px solid black;  /* optional to see container */
+    width: 600px;   
+    height: 600px;  
+    border: 1px solid black;  
 }
 
 .square{
