@@ -1,29 +1,35 @@
 const sizeButton = document.querySelector(`.size`)
 const container = document.querySelector(`.container`)
 
-
-sizeButton.addEventListener(`click`, function(){
+function createGrid(gridSize) {
     container.innerHTML = ''
-    let gridSize
-    do {
-    gridSize = Number(window.prompt("Enter grid size (1-99)"));
-    } while (isNaN(gridSize) || gridSize < 1 || gridSize > 99);
-
     for(let i = 0; i < gridSize * gridSize; i++) {
-        const square = document.createElement('div');
-        square.classList.add('square');
-        
-        const squareSize = 600 / gridSize;
-        square.style.width = `${squareSize}px`;
-        square.style.height = `${squareSize}px`;
+        const square = document.createElement('div')
+        square.classList.add('square')
 
-        container.appendChild(square);
+        const squareSize = 600 / gridSize
+        square.style.width = `${squareSize}px`
+        square.style.height = `${squareSize}px`
+
+        container.appendChild(square)
 
         square.addEventListener('mouseenter', () => {
-            square.style.backgroundColor = 'red';
-        });
+            square.style.backgroundColor = 'red'
+        })
     }
+}
+
+// Create 16x16 grid on page load
+createGrid(16)
+
+sizeButton.addEventListener('click', function(){
+    let gridSize
+    do {
+        gridSize = Number(window.prompt("Enter grid size (1-99)"))
+    } while (isNaN(gridSize) || gridSize < 1 || gridSize > 99)
+    createGrid(gridSize)
 })
+
 
 
 /*        
