@@ -2,17 +2,28 @@ body{
     background-color: pink;
 }
 
+.header{
+    text-align: center;
+    font-size: 50px;
+}
+
+
 .container{
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    margin: 0 auto;
+    width: 600px;   /* fixed size */
+    height: 600px;  /* fixed size */
+    border: 1px solid black;  /* optional to see container */
 }
 
 .square{
     background-color: white;
     width: 50px;
     height: 50px;
-    border: 1px;
-    border-style: solid;
-    margin: 5px;
+}
+
+.button-size{
+    text-align: center;
+    margin-bottom: 15px;
 }
